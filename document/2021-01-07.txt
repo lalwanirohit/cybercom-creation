@@ -1,0 +1,51 @@
+1) $ rm -rf .git ( to remove git repository )
+2) $ git clone <url> name ( to give our specified name to repository )
+3) $ git diff ( compare working directory files with staging area files. )
+4) $ git diff --staged ( compare staged area and our last commit point )
+5) $ git restore <file> ( to discard changes in working directory )
+6) $ git restore --staged ( to unstage the file which is staged )
+7) $ git commit -a -m "message" ( all the staged files are commited but be very careful because it will not add untracked files in commit. so we can only skip staging are for tracked files. )
+
+---------------------------------------------------------------------------------------------------------------------
+8) $ git rm <file_name>  ( remove the file and stage that change into stagged area also )
+9) $ git mv <file_name> ( renames the file as well as stage that change into staging area )
+
+for example suppose we are tracking a file and then we decide to ignore that file so first of all we have to untrack it and then put it in gitignore. if we don't untrack that file and put it in gitignore then after all it will display changes in it. so first we have to untrack that file and then out it into gitignore.
+10) $ git rm --cached <file_name> ( untrack any file ) 
+
+---------------------------------------------------------------------------------------------------------------------
+if we do some changes in any file and later then we realize that it was perfect as it is like last commit point then to go back into that state we can use
+11) $ git checkout -- <file_name>  
+
+it is also risky because if we run this commnad by mistake then our important code can be lost. note that if out file is staged then it will not get affected 
+
+now if we changed lot's files and now we have to go back to the last commit point at that time we can use 
+
+$ gt checkout -f 
+
+-----------------------------------------------------------------------------------------------------------------------------
+$ git remote origin <url>
+$ git remote ( display the list of remotes )
+$ git push -u origin master ( to set origin as upstream for master )
+---------------------------------------------------
+to create aliases for lengthy commnads
+
+$ git config --global alias.<alias_name> <command> 
+$ git config --global alias.unstage 'restore --staged --' ( create alias for restore --staged )
+$ git config --global alias.last 'log -p -1' ( create alias for log -p -1 )
+
+
+$ git show --name-only <token> ( display specific commit points details in deep ) 
+$ git show <token> 
+$ git show <token> > abc.patch ( it will create an abc.patch file in our local machine and in that file all the detailed history of particular commit point will be saved. )
+
+----------------------------------------------------
+when we want to clone any other person's public directory in our local system teh nthis process is alled fork or forking.
+
+--------------------------------------------------
+there are three kind of reset 
+1) reset hard :- it will reset our commit points as well as our code too. 
+2) reset soft :- it will just reset our commit points but our code will be there.
+3) reset mix :- it is same as reset soft not so major difference.
+
+------------------------------------------------------
