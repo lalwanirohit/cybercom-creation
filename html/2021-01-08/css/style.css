@@ -1,0 +1,55 @@
+body{
+    color: rgb(82, 76, 76);
+    font-family: Constantia;
+  
+}
+
+#container{
+    width:985px;
+    height: auto;
+    margin: 50px auto;
+}
+.frame{
+    border: rgb(226, 226, 226) 2px solid;
+    height: 350px;
+    width: 220px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.text{
+    height: 315px;
+    width: 215px;
+    background-color: rgb(51, 51, 51);
+    margin: 2px 2px 2px 2px;
+    color: gainsboro;
+    font-weight: bolder;
+    position: relative;
+    font-size: x-large;
+}
+.text b{
+    margin-top: 60%;
+    margin-left: 30%;
+    position: absolute;
+}
+.caption{
+    height: 30px;
+    width: 215px;
+    background-color: rgb(238, 238, 238);
+    position: absolute;
+    margin-left: 2px;;
+    text-align: center;
+    color: darkgrey;
+    font-weight: bolder;
+    font-size: medium;
+    position: relative;
+}
+.content{
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 15px;
+    font-weight: bolder;
+    color: darkgrey;
+    font-weight: bolder;
+    font-size: large;
+}
