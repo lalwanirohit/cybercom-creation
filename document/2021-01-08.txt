@@ -1,0 +1,85 @@
+there are mainly two ways to include javascript 
+1. inline javascript
+2. external javascript
+
+introduction 
+
+javascript is an lightweight , cross -platform and object-oriented programming lanuguage.
+
+javascript is one of the three core technologies of web development.
+
+today, javascript can be used in different places :
+1. client-side : javascript was traditionally only used in browser.
+2. server-side : thnaks to node js, we can use javascript on server as well
+
+javascript is what made modern web development possible :
+- dynamic effects interactivity
+- modern web application that we interact with
+
+frameworks/libraries like react and angular are 100 % based on javascript: you need to master javascript in order to use them !
+
+html - noun 
+css - adjectives
+js - verbs
+
+variable : variable is a container that contain some value or data.
+ex.  var firstName = 'rohit';
+this way we can define variable in javascript.
+
+primitive javascript datatypes :
+
+1. number : by default all the numbers are float numbers in javascript. so if we type 5 then javascript consider it as 5.0. so we can say that if we define float number or integer number it will be assigned the number datatype to them
+2. string : it is a sequence of characters. 
+3. boolean : it either contains true or false as their value.
+4. null : also means 'non-existent'
+5. undefined : datatype of variable which does not have value yet.
+
+- javascript has dynamic typing : it means that datatypes are automatically assigned to variables. we don't have to define them.
+
+rules for variable naming :
+1. variable name can not start with numbers and special characters except $ and _
+2. we can not use any reserved keywords as a variable name.
+
+there are two types of commands in javascript :
+1. single line comment (//)
+2. multi-line comment (/*  */)
+
+Type Coercion
+
+for example if we have one string variable and one number variable then if we print string variable and then use + sign and then print number variable also with string then that number will be converted into string. this whole process is known as Type Coercion
+
+Variable mutation 
+
+for example we have a variable named age and we stored 28 in it. after some time in code we assigned 'twenty-eight' in that then this process is called variable mutation.
+
+alert ()
+
+when we use alert method it will display an alert box while loading the page.
+
+prompt ()
+
+when we use prompt method at that time we can take input from user int prompt box.
+
+javascript operators : 
+
+1. math operators
+2. logical operators
+3. typeof operator (ex. typeof <variable> , typeof <value>)
+
+operator precedence :
+
+operator precedence means which operator has highest precedence that operator's operation will be performed first
+ex 10 + 20 / 2;
+here / (division has higher precedence so division will be performed first)
+ex (10+20)/2;
+here first the sum will be performed because ( ) has higher precedence than /.
+
+also perform 2 exercise of javascript 
+the first exercise it was easy and simple
+the second was also easy in which i used ternery operator and if else if statements.
+
+both the exercises were easy.
+
+after then there was an html exercise too. it was also easy. 
+
+
