@@ -1,0 +1,7 @@
+.decorate{
+    border-collapse: collapse;
+    border: 2px solid;
+    width: 500px;
+    height: 40px;
+    text-align: center;
+}

@@ -1,0 +1,33 @@
+body{
+	align-items: center;
+	margin-top: 100px;
+}
+.container{
+	display: inline-block;
+	overflow: hidden;
+	background-color: white;
+}
+.card{
+	float: left;
+	margin: 10px 10px;
+	background-color: white;
+	height: 350px;
+	width: 275px;
+	color: grey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+}
+p{
+	color: silver;
+	font-weight: bold;
+}
+hr{
+	width: 200px;
+}
+b{
+	color: black;
+}
+img{
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+}
