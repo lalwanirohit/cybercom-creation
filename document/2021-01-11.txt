@@ -1,0 +1,160 @@
+1. if else statements
+
+so, today i started from if else statements
+so i learn that ow we can compare the statements and based on some true statement we can print the results.
+it becomes easy to compare the things using if else statements.
+
+we can also use if .... else if .... else statement also to compare multiple statements
+
+----------------------------------------------------------------------------------------------------------------------------
+
+2. boolean logic
+
+there are mainly three boolean logical operators.
+
+1. logical and (&&)
+	if all the conditions are true thene and only then the statements will be executed
+2. logical or (||)
+	if any one condition becomes true then the statements will be executed
+3. logical not (!)
+	it inverts teh result. fo example condition returns true then logical not operators will turn it to false. 
+
+----------------------------------------------------------------------------------------------------------------------------
+
+3. switch
+
+in switch case there are many cases and based on that if the case is true then the statements inside that case is executed. 
+break statement : we use break statement to stop the execution of switch case when we found the matching case.
+there is also a default case or we can say when it don't match any case then default case is executed.
+
+switch statement is also we can use as if else statements. when we have so many if else conditions at that time the structure of if else statements becomes complex so at that time we can use switch case as if else statements also.
+
+---------------------------------------------------------------------------------------------------------------------------- 
+
+4. ternary operator ( <condition> ? <statement> : <statement> )
+
+ternary operator is very useful operator.
+when we use just if and else statement or when we have just one condition at that time we can use ternary operator in place of if else statement.
+
+ex. var age = 18
+age > 18 ? console.log('mature enough to vote') : console.log('not mature enough to vote')
+
+----------------------------------------------------------------------------------------------------------------------------
+
+5. function 
+
+function is a very important concept. when we have to write some code more than one time at that time we can place that code into a function and then just call the function where we have to use that code.
+
+this way we can reduce the code and can maintain the code very easily and we can also reuse the code too.
+
+we can use function as expressions also.
+
+function as expression 
+
+ex. var age = function(birthYear){
+	age = 2021 - birthYear ;
+      }
+ 
+so , when we assign function to a variable at that time we can say that we use function as an expression.
+
+local variable
+
+the vaiables which are defined inside the function become local to functions and they can be only used within the function.
+we can not use those variables outside the functions.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+6. array
+
+array are very useful when we have to store more than one value. 
+array can store more than one value of same datatype and it can also store more than one value of different datatype.
+we can create arrays in two ways.
+
+i) var names = ['name1' , 'name2' , ...... , 'name n'];
+ii) var names = new Array('name1' ,'name2', ...... , 'name n');
+
+there are some methods we can use with array
+i) push ( add element at the end of the array )
+ii) unshift ( add element at the begining of the array )
+iii) pop ( removes an element from the end of the array )
+iv) shift ( removes an element from the begining of the array )
+v) sort ( used to sort the arrays in ascending order )
+vi) indexOf ( value )  : ( used to get the index of given value )  note : if the value is not in the array then it will return -1
+
+we can access the elements of array by giving the index number 
+ex : boys = ['rohit','sumant','naimish']
+       console.log(boys[1])	
+output : it will return sumant because it is on index 1
+
+we can also mutate the array elements too.
+ex : boys [0] = "rohit lalwani"
+
+an array can store also different values also
+ex : var arr = [45 , 56 , 'hyundai' , 'maruti' , 34.78]
+
+----------------------------------------------------------------------------------------------------------------------------
+
+7. truthy & falsy values
+
+falsy values : undefined , 0 , null , NaN , ' '
+truthy values : all the not falsy values 
+
+----------------------------------------------------------------------------------------------------------------------------
+
+8. equality operators ( strict and non strict)
+
+there are two operator used to compare values in equality
+i) equal to (==) : it checks only equal value. ex. x=25 and y='25' then x == y will return true
+ii) strict equal to (===) it checks value as well as type. ex. x=25 and y='25' will return false
+
+----------------------------------------------------------------------------------------------------------------------------
+
+9. expressions vs. statements
+
+statement will not return direct result
+while expression will return direct result
+
+for example we say that in console if we write 2 + 3 then it will return 5
+if we write if (2<5) then it will return nothing 
+
+so simply if we write expression then we will get direct result and in the case of statement we will not get direct result.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+10. while we use <label> , we should use for attribute of it.
+
+when we use <input> tag at that time we shuld use name and id attributes of it. when we use these tags , the id tag will be compared with label tag's for attribute. so when we click on label at that time the input tag with same id will be highlighted.
+
+when we want to rander the  tags in javascript at that time also the id attribute will be usefull. 
+when we submit form at that time to get the data of all inputs at that time name attribute of input tag will be usefull. 
+
+there are another attribute of input tag like ,
+text : used to allow user to enter text
+password : used to allow user to enter password and password will be hidden.
+email : allow user to enter email address  
+checkbox : allow user to check multiple checkbox. id shoul be same for all the checkbox
+radio : allow user to select only one radio. id shoul be same for radio.
+file : 
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+11. textarea 
+
+<textarea> tag is used generally to get reviews and feedbacks from the user. so generally to get large text or large input at that time textarea is used
+it has several attributes too which are : cols , rows  , required , name etc..
+
+select
+
+<select> is used to generally get the drop down lists. 
+we can have <option> to provide options in drop down list
+we can also have <optiongroup> to provide group in dropdown list. 
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+challenge : <input type="file"> we should only allow to upload pdf file
+answer : to do this we have to use the accept attribute of input tag. 
+ex :  <input type="file" accept=".pdf"/>
+
+challenge : when we reset the form at that time what actions will be taken on input types  
+answer : in all the input types either the default value if axist or the blank values will be set.
+
