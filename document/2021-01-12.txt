@@ -1,0 +1,181 @@
+Behind the screens of javascript
+
+javascript is generally executed in javascript engine. 
+for example google chrome browser uses v8 engine to execute the javascript code.
+there are so many other avascript engines are also available.
+
+first of all the javascript code is goes to javascript engine. in javascript engine there is a parser which check each line of code lone by line. parser know the javascript rules and therefor it checks the whole javascript code and syntax. if we make any mistake or if there is any mistake in code, then it throws error. if  everything is correct then it generates the abstract syntax tree. this abstract syntax tree is then converted into machine code. machine code is then executed by the machine and we get the output.
+
+=--------------------------------------------------------------------------------------------------------------
+
+( in which order the code of javascript runs ) execution context and execution stack
+
+there are two things
+i) execution context : it means a container or block that holds variable and executabel code
+ii) execution stack : it means the stack that holds different execution contexts. 
+
+when the program execution starts it first stores all the variables and declarations in global execution context. when we call any function at that time it creates a seperate execution context block for that particular function which will be placed above the global execution function in execution stack.
+
+one by one as we call the functions it will create seperate execution context and place them above global execution context line by line.
+
+--------------------------------------------------------------------------------------------------------------
+
+detailed execution context 
+
+in execution context there are three things available
+i) variable object ( VO )
+ii) scope chain
+iii) "this" keyword
+
+there are mainly two phases 
+i) creation phase ii) execution phase
+
+in first phase the generation of execution context block is done and in the second phase each execution context is executed line by line.
+
+in variable object the code is scanned for functions declaration and for variables declaration. for both of them property is created into variable object. at this time function property point to function and variable property point to undefined. this whole process is known as "hoisting".  
+
+--------------------------------------------------------------------------------------------------------------
+
+scope and scope chain 
+
+global scope :  variable having global scope. global scoped variable can be used anywhere.
+function scope : each new function creates a function scoping. variable defined inside function can be only used inside function.
+lexical scope :  when a function defined inside another function at that time time it creaates lexical scoping. it means that the function
+    	      it's own variable. as well as we can use outer function's variable also in this function.
+
+--------------------------------------------------------------------------------------------------------------
+
+"this" keyword
+
+
+
+--------------------------------------------------------------------------------------------------------------
+
+method borrowing 
+
+if we want to use method of another object or of another function at that time we can use method borrowing.
+
+example : india.countPopulation = usa.countPopulation;
+
+here in example india will borrow the countPopulation method from usa.
+
+--------------------------------------------------------------------------------------------------------------
+
+Object & Properties
+
+we can create object like , 
+
+object literal syntax :
+
+var india = {
+     states : 29
+     unionTerritories : 7
+     nationalAnimal : tiger
+     nationalBird : peacock
+}
+
+new object syntax :
+
+var india = new object();
+india.states = 29;
+india.unionTerritories = 7;
+
+here india is the objects and states , unionTerritories , nationalAnimal and nationalBird are properties of india.
+
+we can retrive the data of objects too like , 
+
+console.log(india.states);
+console.log(india['states']);
+
+we can also mutate it's values like , 
+
+india.states = value;
+india['states'] = value;
+
+we can also use function as one of the property of object like , 
+
+var india = {
+     independenceYear : 1947 , 
+     states : 29 , 
+     unionTerritories : 7 , 
+     nationalAnimal : tiger , 
+     nationalBird : peacock , 
+     yearsSinceIndependence : function() { 
+     	return 2021 - this.independenceYear;
+     }
+}
+
+console.log(india.yearsSinceIndependence);
+
+--------------------------------------------------------------------------------------------------------------
+
+loops 
+
+we can use loops to iterate into array , objects etc..
+it is good to use loops 
+
+it becomes easy and we have to write less number of codes when we use the loops.
+
+ex : for ( var i=1 ; i<=5 ; i++)
+      {
+            console.log(i);
+      }
+
+this will print 1 , 2 , 3 , 4 , 5
+
+--------------------------------------------------------------------------------------------------------------
+
+CSP ( Content Security Policy )
+
+Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement to distribution of malware.
+
+To enable CSP, you need to configure your web server to return the Content-Security-Policy HTTP header. 
+
+we can generally use <meta> element to configure pilicy.
+
+example : <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';">
+
+----------------------------------------------------------------------------------------------------------------
+
+browser localStorage and sessionStorage
+
+there are mainly two type of storage 
+    i) localStorage
+    ii) sessionStorage
+
+there are some common methods of both the storages which are as follows :
+
+        i)   getItem(key)        : used to get the value of specified key
+        ii)  setItem(key,value)  : used to set the key and value pair in storage
+        iii) removeItem(key)     : used to remove the key and value associated with it 
+        iv)  clear()             : used to clear whole storage
+        v)   key(index)          : used to get specified value based on key index
+        
+    both have a same property :
+
+        i) length : return length of storage.
+
+there are some difference in both the storages which are as follows 
+
+                                       localStorage                                                                         sessionStorage
+
+                1.  shared with all tabs and windows with                      Visible within a browser tab, including iframes
+                    same origin.                                               	               from the same origin
+                
+                2. the data in localStorage will not be                           the data in sessionStorage will be expire or deleted
+                    removed or expire after browser restart                      when the browser is closed or the session is over.
+                    or even after OS restart too.
+
+----------------------------------------------------------------------------------------------------------------
+
+<noscript> element of html : when the script is disabled in the browser at that time <noscript> tag will be rendered and the  content between <noscript> tag will be displayed on web page.
+
+we can also attach external css file by @import in <style> tag like,
+
+<style>
+@import{ url }
+</style>
+
+
+
+
