@@ -1,0 +1,116 @@
+querySelector ()
+
+- querySelector () is a method which is used to get the element that matches the selector from document.
+- we can get elements based on given class and id to the elements. 
+- query Selector will only return the first element that mathces the selector so be very careful while giving class name and id to the elements. 
+-syntax : 
+	querySelector('selector')
+-example:
+	querySelector('.head')  
+
+- here in example it will return the first element which will have the head class.
+-to select all the elements which have same class as selrctor then use "querySelectorAll()	".
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+addEventListener ()
+
+- The addEventListener() method attaches an event handler to the specified element.
+- syntax :
+	element.addEventListener(event, function)
+- example : 
+	document.querySelector('.btn-roll').addEventListener('click',function() {
+    		dice = Math.floor(Math.random() * 6) + 1 ;
+	});
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+getElementBiId ()
+
+- getElementById () method is used for selecting the element or getting the element which has the same id attribute as specified in this method.
+- it is same as querySelector but it will only allow to match the id attribute. 
+- syntax :
+	getElementById('id');
+- example :
+	getElementById("main");
+- it will select all the elements which will have the id as main.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+innerHTML property
+
+- innerHTML property is used to change or set the html content which is inside an element. 
+- for example we have a <p> tag in which we have text " hello world! " now if we have to change the text when someone click on it then we can do this using the innerHTML property. 
+- syntax : 
+	document.getElementById('id').innerHTML = "changed text";
+- example :
+	function myFunction() {
+  		document.getElementById("demo").innerHTML = "Paragraph changed!";
+	}
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+HTML 5 tags  
+
+1) <article> 
+
+The <article> element represents a section of content that forms an independent part of a document, such as a blog post, article, or other self-contained unit of information, that may be linked to or included in some other content body. 
+
+2) <aside> 
+
+The <aside> element represents a section of the web page that encloses content which is tangentially related to the content around it. 
+
+3) <audio> 
+
+The <audio> element is used to embed audio content in an HTML document without requiring any additional plug-in like Flash player.
+
+4) <canvas> 
+
+The <canvas> element defines a region in the document, which can be used to draw graphics on the fly via scripting (usually JavaScript). For example, it can be used to draw path and shapes, graphs or even perform animations. 
+
+5) <data> 
+
+The <data> element links a piece of content with a machine-readable translation. If the content is time or date related, the more specific <time> element should be used instead.
+
+6) <datalist> 
+
+The <datalist> element specifies a set of pre-defined options for an <input> element. It can be used to provide the quick choices for an input field like an "autocomplete" feature. 
+
+7) <details> 
+
+The <details> element represents a control from which the user can obtain additional information on-demand. It can be used to create an interactive widget that the user can show or hide (like expand and collapse) to retrieve the additional information or controls. Any sort of element can be placed inside the details element.
+
+8) <embed> 
+
+The <embed> element can be used to embed external application, typically multimedia content like audio or video into an HTML document.
+ 
+9) <figcaption>  
+
+The <figcaption> element defines a caption or legend for a figure.
+
+10) <figure>  
+
+The <figure> element represents a unit of content, optionally with a caption, that is self-contained and typically referenced as a single unit. Usually this is an image, an illustration, a diagram, or a code snippet that is referenced in the main text.
+
+11) <footer>  
+
+The <footer> element represents the footer of a document or a section. A footer typically contains information about the author of the document, copyright information, links to related documents etc
+
+12) <header> 
+
+The <header> element represents the header of a document or a section. A header should contain title and heading information about the related content.
+
+13) <hggroup>
+
+he <hgroup> element is used to group heading elements.
+
+14) <mark> 
+
+The <mark> element defines a marked section of text. You can use this tag if you want to highlight a section of your text for reference purposes.
+
+15) <video> 
+
+The <video> element is used to embed video content in an HTML document without requiring any additional plugin like Flash player.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
