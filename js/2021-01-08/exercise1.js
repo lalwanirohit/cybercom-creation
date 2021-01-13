@@ -2,12 +2,12 @@
 var markMass , markHeight , johnMass , johnHeight;
 
 // mark details
-markMass = 72;
-markHeight = 6.3;
+markMass = 75; // in kg
+markHeight = 1.9812; // in meter
 
 //john details
-johnMass = 75;
-johnHeight = 6.5;
+johnMass = 70;
+johnHeight = 1.92024;
 
 //BMI calculations
 var markBmi = markMass / (markHeight * markHeight);
