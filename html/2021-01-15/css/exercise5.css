@@ -1,0 +1,58 @@
+b{
+    margin-left: 23%;
+}
+table{
+    border: 5px double;
+    border-bottom:2px solid;
+    border-collapse: collapse;
+    margin: auto;
+}
+.company, .collaborators ,.celltype ,.applications{
+    border-top: 2px solid;
+    border-right: 2px solid;
+    border-left: 2px solid;
+    padding-top: 10px;
+    vertical-align: top;
+    text-align: left;
+    padding-bottom: 5px;
+}
+.header {
+    background-color: rgb(195, 255, 189);
+    border-bottom: 5px double;
+    border-right: 2px solid;
+    vertical-align: top;
+    text-align: left;
+}
+
+.company {
+    padding-left: 10px;
+    background-color: rgb(196, 222, 255);
+    width: 150px;
+    font-weight: bold;
+    margin: 0px;
+}
+.collaborators {
+    padding-left: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 250px;
+}
+.collaborators li {
+    margin-left: -20px;
+    padding-left: 25px;
+} 
+.celltype {
+    padding-left: 10px;
+    background-color: rgb(251, 191, 193);
+    width: 120px;
+    vertical-align: top;
+    text-align: left;
+}
+.applications {
+    padding-left: 10px;
+    background-color: rgb(255, 255, 195);
+    width: 200px;
+}
+table tr:last-child td{
+    border-top:none;
+    border-right: none;
+}
