@@ -1,0 +1,59 @@
+body {
+    padding: 0;
+}
+
+#formArea {
+    width: 700px;
+    height: fit-content;
+    text-align: center;
+}
+
+.formHeader {
+    height: 180px;
+    background-image:url(form-header.jpg);
+}
+
+.layer {
+    height:180px;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.layer h1 {
+    color: white;
+    text-align: center;
+    padding-top: 09%;
+}
+
+.formContent {
+    padding-top: 50px;
+}
+
+.formField {
+    width: 550px;
+    height: 40px;
+    border : 1px solid;
+}
+
+textarea , .formField {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-color:rgb(188, 188, 192);
+    border-radius: 6px;
+    padding-left: 10px;
+}
+
+textarea{
+    padding-top: 10px;
+}
+
+.btn {
+    margin-top: 50px;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(134,105,221);
+    border-radius: 42px;
+    border-color: rgb(134,105,221);
+    color: white;
+    font-weight: bold;
+    box-shadow: 2px 2px 8px rgb(134,105,221);; 
+}
