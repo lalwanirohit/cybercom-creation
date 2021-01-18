@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Html Exercise 7</title>
+</head>
+<body>
+    <div class="content">
+        <h1 class="heading"> Fill The Form</h1>
+    <form action="success.html">
+        <fieldset>
+            <legend>Your Address</legend>
+                <table>
+                    <tr>
+                        <td><label for="fname">First name</label></td>
+                        <td><input type="text" name="fname" id="fname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lname">Last name</label></td>
+                        <td><input type="text" name="lname" id="lname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="street">Street</label></td>
+                        <td><input type="text" name="street" id="street"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">City</label></td>
+                        <td><input type="text" name="city" id="city"></td>
+                    </tr>
+                </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Details</legend>
+                <table>
+                    <tr>
+                        <td><label for="biography">Biography</label></td>
+                        <td><textarea rows="5" cols="30" name="biography" id="biography"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="image">Image</label></td>
+                        <td><input type="file" name="image" id="image" accept=".jpg , .png"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="agegroup">Age Group</label></td>
+                        <td><select name="agegroup" id="agegroup">
+                                <option value="0to9">0 to 9 Years</option>
+                                <option value="10to18">10 to 18 Years</option>
+                                <option value="19to35">19 to 35 Years</option>
+                                <option value="35to60">35 to 60 Years</option>
+                                <option value="60 to 100">60 to 100 Years</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Interests</legend>
+                <table>
+                    <tr>
+                        <td><label for="hobbies">Hobbies</label></td>
+                        <td><textarea rows="6" cols="30" name="hobbies" id="hobbies"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="car">Favourite car ?</label></td>
+                        <td><select name="car" id="car">
+                                <option value="volvo">Volvo</option>
+                                <option value="audi">Audi</option>
+                                <option value="hyundai">Hyundai</option>
+                                <option value="bmw">BMW</option>
+                                <option value="benz">Benz</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="transport">Favourite public transport ?</label></td>
+                        <td><select name="transport" id="transport">
+                            <optgroup label="Ground">
+                                <option value="bus">Bus</option>
+                                <option value="train">Train</option>
+                                <option value="metro">Metro</option>
+                            </optgroup>
+                            <optgroup label="Water">
+                                <option value="ship">ship</option>
+                                <option value="boat">Boat</option>
+                                <option value="watertaxy">Water taxy</option>
+                            </optgroup>
+                            <optgroup label="Air">
+                                <option value="aeroplane">Aeroplane</option>
+                                <option value="helicopter">Helicopter</option>
+                                <option value="jet">Private jet</option>
+                            </optgroup>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+        </fieldset> <br>
+
+    <button type="submit" class="submit">Submit</button>     <button type="reset" class="reset">Reset</button>
+    </form>
+</div>
+    <script src="js/script.js"></script>
+</body>
+</html>

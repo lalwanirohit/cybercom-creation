@@ -1,0 +1,40 @@
+.content{
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+}
+
+.heading {
+    text-align: center;
+}
+
+fieldset {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+table {
+    border-spacing: 4px;
+}
+
+td {
+    width:200px;
+    vertical-align: top;
+    padding-left: 10px;
+}
+
+.submit{
+    position: absolute;
+    margin-left: 50%;
+}
+
+.reset{
+    position: absolute;
+    margin-left: 40%;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20%;
+}
