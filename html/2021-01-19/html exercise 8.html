@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>html exercise 8</title>
+</head>
+
+<body>
+    <div class="content">
+        <form action="information.php" method="POST">
+            <fieldset>
+                <legend><b>Personal Information</b></legend>
+                <table>
+                    <tr>
+                        <td><label for="firstname">First Name</label></td>
+                        <td><input type="text" name="firstname" id="firstname" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lastname">Last Name</label></td>
+                        <td><input type="text" name="lastname" id="lastname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dob">Date Of Birth</label></td>
+                        <td>
+                            <select name="month" id="month" required><option disabled selected>month</option></select>
+                            <select name="date" id="date" required><option disabled selected>day</option></select>
+                            <select name="year" id="year" required><option disabled selected>year</option></select>
+                            <span class="tooltip" title="Please provide correct birth date for ex. month - day - year">?</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">Gender</label></td>
+                        <td><select name="gender" id="gender" class="selector">
+                                <option value="" disabled selected>Choose a gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="Intersex">Intersex</option>
+                            </select>
+                            <span class="tooltip" title="please select a gender.">?</span>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend><b>Account Information</b></legend>
+                <table>
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" name="email" id="email" required>
+                            (Your email address will be your username)</td>
+                    </tr>
+                    <tr>
+                        <td><label for="reemail">Re-type Email</label></td>
+                        <td><input type="text" name="reemail" id="reemail" onkeyup="checkEmail()"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password</label></td>
+                        <td><input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z]).{8,}" onkeyup="checkPass()" required>
+                            (min 8 characters 1 number case-sensitive)</td>
+                    </tr>
+                    <tr>
+                        <td><label for="repass">Re-type Password</label></td>
+                        <td><input type="password" name="repass" id="repass" onkeyup="checkRePass()"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="secque">Security Question</label></td>
+                        <td><select name="secque" id="secque" class="selector">
+                                <option value="" disabled selected>choose a security question</option>
+                                <option value="Which is your favourite book ?">Which is your favourite book ?</option>
+                                <option value="What was the name of your first pet ?">What was the name of your first pet ?</option>
+                                <option value="Where did you meet your spouse ?">Where did you meet your spouse ?</option>
+                                <option value="what was your childhood nickname ?">what was your childhood nickname ?</option>
+                                <option value="What was the name of your third class teacher ?">What was the name of your third class teacher ?</option>
+                            </select>
+                            <span class="tooltip"
+                                title="choose an appropriate question. remember this question will be asked if you forget the password">?</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="secans">Security Answer</label></td>
+                        <td><input type="text" name="secans" id="secans">
+                            <br>(Not case-sensitive)
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend><b>Contact Information</b></legend>
+                <table>
+                    <tr>
+                        <td><label for="address">Address</label></td>
+                        <td><input type="text" name="address" id="address"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">City</label></td>
+                        <td><input type="text" name="city" id="city"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="state">State</label></td>
+                        <td><select name="state" id="state" class="selector">
+                                <option value="" disabled selected>choose a state</option>
+                                <option value="gujarat">Gujarat</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Uttar-pradesh">Uttar-pradesh</option>
+                                <option value="Madhya pradesh">Madhya pradesh</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="zip">Zip Code</label></td>
+                        <td><input type="text" name="zip" id="zip" class="zip">
+                            <input type="text" value="optional" class="zip" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Phone</label></td>
+                        <td><input type="tel" name="phone" id="phone" class="phone" pattern="[0-9]+" size="10"
+                                maxlength="10" required>
+                            <span class="tooltip" title="provide proper phone number for ex : 9033631496">?</span>
+                            <select name="type" id="type" class="">
+                                <option value="Mobile" selected>Mobile</option>
+                                <option value="office">office</option>
+                                <option value="parent Mobile">Parent Mobile</option>
+                                <option value="home">Home</option>
+                            </select>
+                            (No spaces or dashes)
+                        </td>
+                    </tr>
+                </table>
+            </fieldset> <br><br>
+            <input type="reset" value="Reset" class="reset">
+            <input type="submit" value="Submit" class="submit">
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

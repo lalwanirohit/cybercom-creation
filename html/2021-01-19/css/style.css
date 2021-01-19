@@ -1,0 +1,93 @@
+.content {
+    width: 450px;
+    background-color: rgb(248,246,247);
+    margin: 0 auto;;
+}
+
+fieldset{
+    border: 0;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+legend {
+    font-size: larger;
+    padding-top: 15px;
+}
+
+table {
+    margin-left: 15px;
+    border-spacing: 7px;
+}
+
+
+
+td label{
+    width: 120px;
+    text-align: right;
+    font-size:small;
+    vertical-align:text-top;
+    display: inline-block;
+}
+
+td{
+    font-size:small;
+    width: 120px;
+}
+
+td input , select{
+    width: 250px;
+    font-size:small;
+    border-radius: 1px;
+    height: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    border: 1px solid;
+    border-color:rgb(188, 188, 192);
+}
+
+.selector {
+    width: 220px;
+    font-size:small;
+    border-radius: 1px;
+    height: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    border: 1px solid;
+    border-color:rgb(188, 188, 192);
+}
+
+td select {
+    width:72px;
+    height: 20px;
+    border-radius: 1px;
+}
+
+td .zip {
+    width:50px;
+    height: 20px;
+    text-align: left;
+}
+
+td .phone {
+    width: 130px;
+}
+
+.tooltip {
+    position: relative;
+    color: white;
+    background: dodgerblue;
+    padding: 2px 6px;
+    border-radius: 100%;
+    font-size: 15px;
+}
+
+.reset {
+    width:70px;
+    margin-left: 120px;
+}
+
+.submit {
+    width: 70px;
+    margin-left: 60px;
+}
