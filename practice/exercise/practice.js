@@ -97,27 +97,57 @@ console.log(arrObjects);
 ///////     o Display the data in one table format another page that is, view.html
 //////////////////////////////////////////////////////////////
 
-// var employees = [];
+// let employees = [];
+// const addEmployee = (ev) => {
+//     //ev.preventDefault();
+//     let employee = {
+//         id:Date.now(),
+//         ename : document.getElementById("name").value ,
+//         email : document.getElementById("email").value ,
+//         dob : document.getElementById("dob").value
+//     }
 
-// function store () {
-//     var userName = document.getElementById("name").value;
-//     employees.push(userName);
-//     var userEmail = document.getElementById("email").value;
-//     employees.push(userEmail);
-//     var userDob = document.getElementById("dob").value;
-//     employees.push(userDob);
-//     localStorage.setItem("users", JSON.stringify(employee));
-// }
-// console.log(employees);
-var employees = [];
-var btn = document.getElementById("btn").addEventListener("click" , addEmployee);
-function addEmployee() {
-    employees.push(
-        {
-            empname: document.getElementById('name').value,
-            empmail: document.getElementById('email').value,
-            empdob: document.getElementById('dob').value
-        }
-    );
-    localStorage.setItem("localemp" , JSON.stringify(employees));
-}
+//     emps = JSON.parse(localStorage.getItem("employeeList") || "[]");
+//     emps.forEach(function(emp) {
+//         employees.push(emp);
+//     })
+//     employees.push(employee);
+//     document.forms[0].reset();
+
+//     localStorage.setItem('employeeList' , JSON.stringify(employees));    
+    
+// } 
+// document.getElementById("btn").addEventListener("click" , addEmployee);
+
+//     emps = JSON.parse(localStorage.getItem("employeeList") || "[]");
+    
+//     var table = document.getElementById("records"); 
+//     emps.forEach(function(emp) {
+//     var row = table.insertRow(0);
+//     var cell1 = row.insertCell(0);
+//     var cell2 = row.insertCell(1);
+//     var cell3 = row.insertCell(2);
+//     var cell4 = row.insertCell(3);
+//     for(let i=0 ; i<4 ; i++) {
+//         cell1.innerHTML = `${emp['id']}`;
+//         cell2.innerHTML = `${emp['ename']}`;
+//         cell3.innerHTML = `${emp['email']}`;
+//         cell4.innerHTML = `${emp['dob']}`;
+//       }
+// })
+
+
+///////////////////////////////////////////////////////////////
+/////// Display records from localstorage
+///////////////////////////////////////////////////////////////
+
+function reset(){
+window.location = "practice.html";
+document.getElementById("name").value="";
+document.getElementById("email").value="";
+document.getElementById("dob").value="";
+
+} 
+
+
+

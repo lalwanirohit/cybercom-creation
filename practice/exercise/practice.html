@@ -9,7 +9,7 @@
     <h1>practice exercise given by pritee ma'am</h1>
     
     
-    <form method="post">
+    <form method="get" action="view.html">
         <table>
             <tr>
                 <td><lable for="name">Name :</lable></td>
@@ -24,12 +24,18 @@
                 <td><input type="date" name="dob" id="dob"></td>
             </tr>
             <tr>
-                <td><button type="submit" id="btn" >Submit</button></td>
+                <td><button type="submit" id="btn">Submit</button></td>
             </tr>
         </table>
+
+        <div id="msg">
+            <pre></pre>
+        </div>
     </form>
 
-    
+    <table id="records" border="1">
+    </table>
+
+    <script src="practice.js"></script>
 </body>
-<script src="practice.js"></script>
 </html>
