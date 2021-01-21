@@ -41,3 +41,12 @@ button {
     float: right;
     margin-right: 60px;
 }
+
+table{
+    border:1px solid black;
+}
+td {
+    width: 320px;
+    text-align: center;
+    border-right: 1px solid balck;
+}
