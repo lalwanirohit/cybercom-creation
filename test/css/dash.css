@@ -1,0 +1,43 @@
+*{
+    margin: 0 0 0 0;
+    padding: 0;
+}
+.sidebar {
+    background-color: orange;
+    width:250px;
+    height: 720px;
+    float: left;
+}
+
+.sidebar li {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+.sidebar a {
+    text-decoration: none;
+    text-align: left;
+    font-size: larger;
+    color: white;
+}
+
+span {
+    color: white;
+    font-size: larger;
+    margin-left: 20px;
+}
+
+input {
+    margin-top: 50px;
+    margin-left: 50px;
+    height: 20px;
+    width: 250px;
+}
+
+button {
+    background-color: orange;
+    width:150px;
+    height: 30px;
+    float: right;
+    margin-right: 60px;
+}

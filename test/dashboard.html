@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/dash.css">
-    <title>Users</title>
+    <title>Dashboard</title>
 </head>
 <body>
     <div class="sidebar">
@@ -18,20 +18,12 @@
         </ul>
     </div>
 
-    <h2>Add User</h2>
 
-    <form>
-        <input type="text" id="uname" name="uname" placeholder="Name" required>
-        <input type="email" id="umail" name="umail" placeholder="Email" required>
-        <input type="password" id="upass" name="upass" placeholder="Password" required>
-        <input type="date" id="udob" name="udob" placeholder="Birthdate" required><br><br>
-        <button type="submit">Add User</button>
-    </form>
-    <br><br><br>
-    <h2>Users List</h2>
+
+
 
     <script>
-
+        document.getElementById("user").innerHTML= "Welcome, " + sessionStorage.getItem('adminName');
     </script>
 </body>
 </html>

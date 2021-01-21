@@ -9,7 +9,7 @@
 <body>
     <h1>Registration</h1>
     <div class="registercontainer">
-        <form action="">
+        <form>
             <table>
                 <tr>
                     <td><div id="msg"></div></td>
@@ -74,15 +74,18 @@
             var city = document.getElementById('city').value;            
             var state = document.getElementById('state').value;
 
-            var adminData = {
-                adminName : name,
-                adminEmail : email,
-                adminPass : pass,
-                adminCity : city,
-                adminState : state,
-            };
-
-            admin.push(adminData);
+            admin.push(name);
+            admin.push(email);
+            admin.push(pass);
+            admin.push(city);
+            admin.push(state);
+            // var adminData = {
+            //     adminName : name,
+            //     adminEmail : email,
+            //     adminPass : pass,
+            //     adminCity : city,
+            //     adminState : state,
+            // };
             document.forms[0].reset();
             localStorage.setItem('AdminList' , JSON.stringify(admin)); 
             location.href = 'login.html';   

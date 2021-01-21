@@ -9,8 +9,11 @@
 <body>
     <h1>Login</h1>
     <div class="container">
-        <form method="get" action="">
+        <form>
             <table>
+                <tr>
+                    <td><div id="msg"></div></td>
+                </tr>
                 <tr>
                     <td><input type="email" name="email" id="email" placeholder="Email" required></td>
                 </tr>
@@ -18,7 +21,7 @@
                     <td><input type="password" anem="password" id="password" placeholder="password" required></td>
                 </tr>
                 <tr>
-                    <td><button type="submit">Login</button> <br></td>
+                    <td><button type="submit" id="login">Login</button> <br></td>
                 </tr>
                 <tr>
                     <td>OR</td>
@@ -30,18 +33,28 @@
         </form>
     </div>
 
-
     <script>
-        var email = document.getElementById("email").value;
-        var pass = document.getElementById("password").value;
+        document.getElementById("login").addEventListener("click", function() {
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("password").value;
+            console.log(email);
+            console.log(pass);
 
-        var data = localStorage.getItem("AdminList");
-        var d = JSON.parse(data);
- 
-        console.log(d.adminData);
-
-        d.forEach(function(adm) {
-        console.log(`${adm['email']}`);
+            var data = localStorage.getItem("AdminList");
+            var d = JSON.parse(data);
+            document.forms[0].reset();
+            if(email === d[1] && pass === d[2]) {
+                document.getElementById("msg").innerHTML="logged in successfully";
+                console.log("logged in");
+                location.href = 'dashboard.html';
+                sessionStorage.setItem("adminName" , d[0]);
+            }
+            else {
+                document.getElementById("msg").innerHTML="Please enter correct Details";
+            }
+            console.log(d[1]);
+            console.log(d[2]);
+        });
     </script>
 </body>
 </html>
