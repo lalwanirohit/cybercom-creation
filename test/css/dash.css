@@ -42,11 +42,34 @@ button {
     margin-right: 60px;
 }
 
-table{
-    border:1px solid black;
-}
 td {
-    width: 320px;
+    width: 220px;
     text-align: center;
     border-right: 1px solid balck;
+}
+
+.young{
+    width: 300px;
+    height: 150px;
+    background-color:peachpuff;
+    margin-left: 100px;
+    float: left;
+    text-align: center;
+}
+
+.middleage{
+    width: 300px;
+    height: 150px;
+    background-color:peachpuff;
+    margin-left: 100px;
+    float: left;
+    text-align: center;
+}
+.old{
+    width: 300px;
+    height: 150px;
+    background-color:peachpuff;
+    margin-left: 100px;
+    float: left;
+    text-align: center;
 }

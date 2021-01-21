@@ -1,26 +1,4 @@
-
-// var array = [];
-// function addAdmin()
-// {
-// 	var name = document.getElementById('name').value;
-// 	var email = document.getElementById('email').value;
-//     var pass = document.getElementById('password').value;
-//     var city = document.getElementById('city').value;
-//     var state = document.getElementById('state').value;
-// 	 var admin = {
-// 		name : name,
-// 		email : email,
-//         password : pass,
-//         city : city,
-//         state : state
-//     };
-
-// 	array.push(admin);
-// 	localStorage.setItem("admin", admin);
-// 	console.log(`admin registered successfully`);
-	
-// };
-// document.getElementById("reg").addEventListener("click", addAdmin());
+// add userList array of objects in localstorage
 document.getElementById("adduser").addEventListener("click", function() {
     let users = [];
         var now = new Date().getFullYear();
@@ -47,3 +25,4 @@ document.getElementById("adduser").addEventListener("click", function() {
         localStorage.setItem('userList', JSON.stringify(users));
         location.href="subuser.html";
     });
+

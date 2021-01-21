@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dash.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <br><br>
+            <span id="user"></span><br><br>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="user.html">Users</a></li>
+            <li><a href="Usersession.html">Login Sessions</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <table id="sessionrecords"></table>
+
+    <script>
+        document.getElementById("user").innerHTML= "Welcome, " + sessionStorage.getItem('adminName');
+            users = JSON.parse(localStorage.getItem("userSessions") || "[]");
+
+            var table = document.getElementById("sessionrecords"); 
+            users.forEach(function(u) {
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+
+                cell1.innerHTML = `${u['name']}`;
+                cell2.innerHTML = `${u['date']}`;
+            });
+        document.getElementById("user").innerHTML= "Welcome, " + sessionStorage.getItem('adminName');
+    </script>
+</body>
+</html>

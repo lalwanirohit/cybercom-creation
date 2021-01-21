@@ -34,12 +34,13 @@
     </div>
 
     <script>
+
+        // get data from localstorage and check login credentials
         document.getElementById("login").addEventListener("click", function() {
             var email = document.getElementById("email").value;
             var pass = document.getElementById("password").value;
-            console.log(email);
-            console.log(pass);
 
+            // for admin
             var data = localStorage.getItem("AdminList");
             var d = JSON.parse(data);
             document.forms[0].reset();
@@ -52,8 +53,33 @@
             else {
                 document.getElementById("msg").innerHTML="Please enter correct Details";
             }
-            console.log(d[1]);
-            console.log(d[2]);
+
+
+            // for user
+            users2 = JSON.parse(localStorage.getItem("userList") || "[]");
+            users2.forEach(function (u) {
+            if(email == u.email && pass == u.password) {
+                document.getElementById("msg").innerHTML="logged in successfully";
+                console.log("logged in");
+                location.href = 'subuser.html';
+                sessionStorage.setItem("clientName",u.name);
+                sessionStorage.setItem("dob",u.dob);
+
+                // store date and username into localStorage
+                let userSessions = [];
+                var date = new Date();
+                let session = {
+                    name : document.getElementById("uname").value,
+                    login : date,
+                }
+                session2 = JSON.parse(localStorage.getItem("userSessions") || "[]");
+                session2.forEach(function (u) {
+                    userSessions.push(u);
+                });
+                userSessions.push(session);
+
+                localStorage.setItem('userSessions', JSON.stringify(userSessions));
+            }})
         });
     </script>
 </body>

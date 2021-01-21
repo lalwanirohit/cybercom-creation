@@ -12,18 +12,47 @@
             <br><br>
             <span id="user"></span><br><br>
             <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="subuser.html">Users</a></li>
+            <li><a href="user.html">Users</a></li>
             <li><a href="Usersession.html">Login Sessions</a></li>
             <li><a href="logout.html">Logout</a></li>
         </ul>
     </div>
+    <br><br><br>
+    <div class="young">
+        <p>Users less than 18 Years</p>
+        <span id="young"></span>
+    </div>
 
+    <div class="middleage">
+        <p>18 - 50 Years users</p>
+        <span id="middle"></span>
+    </div>
 
-
-
+    <div class="old">
+        <p>Users more than 50 Years</p>
+        <span id="old"></span>
+    </div>
 
     <script>
         document.getElementById("user").innerHTML= "Welcome, " + sessionStorage.getItem('adminName');
+        users2 = JSON.parse(localStorage.getItem("userList") || "[]");
+            var less18 = 0;
+            var between = 0;
+            var more50 = 0;
+            users2.forEach(function (u) {
+            if(u.age < 18) {
+                less18 ++;
+            }
+            else if (u.age >= 18 && u.age <= 50){
+                between++;
+            }
+            else{
+                more50++;
+            }
+            });
+            document.getElementById("young").innerHTML = `<b> ${less18} Users </b>`;
+            document.getElementById("middle").innerHTML = `<b> ${between} Users </b>`;
+            document.getElementById("old").innerHTML = `<b> ${more50} Users </b>`;
     </script>
 </body>
 </html>

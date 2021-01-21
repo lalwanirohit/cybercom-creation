@@ -1,60 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/dash.css">
-    <title>Users</title>
+    <title>Sub user</title>
 </head>
-
 <body>
     <div class="sidebar">
         <ul>
             <br><br>
             <span id="user"></span><br><br>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="subuser.html">Users</a></li>
-            <li><a href="Usersession.html">Login Sessions</a></li>
+            <li><a href="subuser.html">Dashboard</a></li>
             <li><a href="logout.html">Logout</a></li>
         </ul>
     </div>
 
-    <h2>Add User</h2>
+    <center>
+        <h1>Welcome to the cybercom creation</h1>
+        <div id="birthday"></div>
+    </center>
 
-    <form>
-        <input type="text" id="uname" name="uname" placeholder="Name" required>
-        <input type="email" id="umail" name="umail" placeholder="Email" required>
-        <input type="password" id="upass" name="upass" placeholder="Password" required>
-        <input type="date" id="udob" name="udob" placeholder="Birthdate" required><br><br>
-        <button type="submit" id="adduser">Add User</button>
-    </form>
-    <br><br><br>
-    <h2>Users List</h2>
-    <br><br>
 
-    <table id="records"></table>
+
 
     <script>
-            users = JSON.parse(localStorage.getItem("userList") || "[]");
+        document.getElementById("user").innerHTML= "Welcome, " + sessionStorage.getItem('clientName');
 
-            var table = document.getElementById("records"); 
-            users.forEach(function(u) {
-            var row = table.insertRow(0);
-            var cell1 = row.insertCell(0);
-            var cell2 = row.insertCell(1);
-            var cell3 = row.insertCell(2);
-            var cell4 = row.insertCell(3);
-            for(let i=0 ; i<4 ; i++) {
-                cell1.innerHTML = `${u['name']}`;
-                cell2.innerHTML = `${u['email']}`;
-                cell3.innerHTML = `${u['password']}`;
-                cell4.innerHTML = `${u['dob']}`;
-                cell4.innerHTML = `${u['age']}`;
-            }
-        })
+        var now = new Date().getUTCMonth();
+        var nowday = new Date().getUTCDate();
+        console.log(now);
+        console.log(nowday);
+        var ext = sessionStorage.getItem('dob');
+        var d = new Date(ext);
+        if ( !!d.valueOf() ) {
+        var month = d.getMonth();
+        var date = d.getUTCDate();
+        }
+        if(now == month && nowday == date) {
+            document.getElementById("birthday").innerHTML="<h1>Happy Birthday " + sessionStorage.getItem('clientName') + "</h1>" ;
+            document.getElementById("birthday").style.color = "powderblue";
+        }
     </script>
-    <script src="js/script.js"></script>
 </body>
-
 </html>

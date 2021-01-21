@@ -79,13 +79,7 @@
             admin.push(pass);
             admin.push(city);
             admin.push(state);
-            // var adminData = {
-            //     adminName : name,
-            //     adminEmail : email,
-            //     adminPass : pass,
-            //     adminCity : city,
-            //     adminState : state,
-            // };
+            
             document.forms[0].reset();
             localStorage.setItem('AdminList' , JSON.stringify(admin)); 
             location.href = 'login.html';   
