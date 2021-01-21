@@ -9,19 +9,22 @@
 <body>
     <h1>Registration</h1>
     <div class="registercontainer">
-        <form method="get" action="">
+        <form action="">
             <table>
+                <tr>
+                    <td><div id="msg"></div></td>
+                </tr>
                 <tr>
                     <td><input type="text" name="name" id="name" placeholder="Name" required></td>
                 </tr>
                 <tr>
-                    <td><input type="email" name="email" id="email" placeholder="Email" required></td>
+                    <td><input type="email" name="email" id="email" placeholder="Email"></td>
                 </tr>
                 <tr>
-                    <td><input type="password" name="password" id="password" placeholder="Password" required></td>
+                    <td><input type="password" name="password" id="password" placeholder="Password"></td>
                 </tr>
                 <tr>
-                    <td><input type="password" name="confirmpass" id="confirmpass" placeholder="Confirm Password" required></td>
+                    <td><input type="password" name="confirmpass" id="confirmpass" placeholder="Confirm Password"></td>
                 </tr>
                 <tr>
                     <td>
@@ -45,7 +48,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" id="terms" name="terms" required>Terms & Condition</td>
+                    <td><input type="checkbox" id="terms" name="terms">Terms & Condition</td>
                 </tr>
                 <tr>
                     <td><button type="submit" id="reg">Register</button></td>
@@ -54,6 +57,36 @@
         </form>
     </div>
 
-    <script src="js/script.js"></script>
+    <script>
+        if("AdminList" in localStorage){
+                document.getElementById("msg").innerHTML ="<b>Admin Is registered</b>";    
+                document.getElementById("reg").style.backgroundColor="white";
+            } else {
+                document.getElementById("reg").style.backgroundColor="orange";
+            }
+        
+        document.getElementById("reg").addEventListener("click", function() {
+            var admin = [];
+            
+            var name = document.getElementById("name").value;            
+            var email = document.getElementById('email').value;            
+            var pass = document.getElementById('password').value;
+            var city = document.getElementById('city').value;            
+            var state = document.getElementById('state').value;
+
+            var adminData = {
+                adminName : name,
+                adminEmail : email,
+                adminPass : pass,
+                adminCity : city,
+                adminState : state,
+            };
+
+            admin.push(adminData);
+            document.forms[0].reset();
+            localStorage.setItem('AdminList' , JSON.stringify(admin)); 
+            location.href = 'login.html';   
+        });
+    </script>
 </body>
 </html>

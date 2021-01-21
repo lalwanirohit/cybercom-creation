@@ -31,6 +31,17 @@
     </div>
 
 
-    <script src="js/script.js"></script>
+    <script>
+        var email = document.getElementById("email").value;
+        var pass = document.getElementById("password").value;
+
+        var data = localStorage.getItem("AdminList");
+        var d = JSON.parse(data);
+ 
+        console.log(d.adminData);
+
+        d.forEach(function(adm) {
+        console.log(`${adm['email']}`);
+    </script>
 </body>
 </html>
