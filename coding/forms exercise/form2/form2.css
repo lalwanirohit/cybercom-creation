@@ -1,0 +1,17 @@
+form{
+    max-width: 600px;
+    background-color: limegreen;
+}
+form legend {
+    text-align: center;
+}
+fieldset{
+    background-color: lightgreen;
+}
+.information {
+    margin-top: 25px;
+}
+
+#errors {
+    color: red;
+}

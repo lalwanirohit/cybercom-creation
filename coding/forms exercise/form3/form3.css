@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+form {
+    background-color: rgb(34, 37, 54);
+    color: goldenrod;
+    max-width: 400px;
+    margin: auto;
+}
+td{
+    text-align: right;
+    padding-bottom: 15px;
+}
+.form_header{
+    background-color: goldenrod;
+    color: rgb(34, 37, 54);
+    height: 40px;
+    font-size: large;
+    padding-top: 5px;;
+    text-align: center;
+}
+form .form_submit{
+    background-color: goldenrod;
+    height: 40px;;
+}
+.form_submit input {
+    background-color: green;
+    height: 30px;
+    margin-top: 5px;;
+    width: 80px;
+    color: white;
+    margin-left: 80px;;
+}
+#errors {
+    color: red;
+}
+.information {
+    margin-top: 20px;
+    margin-left: 570px;
+}

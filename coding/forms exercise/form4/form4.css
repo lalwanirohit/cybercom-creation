@@ -1,0 +1,54 @@
+#errors {
+    color: red;
+}
+.container {
+    margin: auto;
+    max-width: 400px;
+    margin-top: 20px;
+}
+form{
+    max-width: 400px;
+    background-color: rgb(251, 239, 191);
+}
+.header {
+    background-color: rgb(231, 118, 50);
+    width: 400px;
+    color: white;
+    text-align: center ;
+    height: 70px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.button{
+    background-color: rgb(248, 204, 55);
+    border:1px solid rgb(248, 204, 55) ;
+    width: 400px;
+    color: rgb(75, 40, 20);
+    font-size: x-large;
+    text-align: center ;
+    height: 70px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 0;
+}
+input {
+    width: 360px;
+    height: 30px;
+    margin-left: 15px;
+    margin-top: 25px;
+}
+input placeholder {
+    color: sandybrown;
+}
+
+textarea {
+    width:360px;
+    margin-left: 15px;
+    margin-top: 25px;;
+}
+
+.information {
+    float: right;
+    margin-top: 20px;
+    margin-right: 510px;
+}

@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+form {
+    max-width: 400px;
+    margin: auto;
+}
+th {
+    background-color: papayawhip;
+    color: red;
+    height: 40px;
+    font-size: x-large;
+}
+td {
+    background-color: powderblue;
+}
+
+input {
+    width: 220px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #ffffff;
+}
+
+select, textarea {
+    width: 220px;
+    margin-left: 10px;
+       margin-right: 10px;
+}
+
+.select {
+    width:20px;
+}
+.buttons {
+    width:100px;
+    margin-left: 50px;
+}
+.file {
+    text-align: center;
+}
+#errors {
+    color: red;
+}
+.information {
+    float: right;
+    margin-right: 570px; 
+    margin-top: 50px;
+}
