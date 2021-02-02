@@ -1,0 +1,31 @@
+body {
+  background-color: #fffffc;
+  background-image: linear-gradient(315deg, #fffffc 0%, #beb7a4 74%);
+}
+table {
+  margin: auto;
+  background-color: white;
+  border-radius: 15px;
+  border-collapse: collapse;
+}
+td {
+  width: 200px;
+  text-align: center;
+  height: 30px;
+}
+th {
+  background-color: #616161;
+  color: white;
+  height: 30px;
+}
+a {
+  margin-left: 450px;
+}
+button {
+  width: 250px;
+  height: 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: #fffffc;
+  background-image: linear-gradient(315deg, #fffffc 0%, #beb7a4 74%);
+}

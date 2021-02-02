@@ -1,56 +1,57 @@
 * {
-    margin :0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .container {
-    background-color: silver;
-    max-width: 300px;
-    height: 220px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: auto;
-    margin-top: 80px;
+  background-color: silver;
+  max-width: 300px;
+  height: AUTO;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  margin-top: 80px;
 }
 .header {
-    background-color: darksalmon;
-    color: white;
-    width: 260px;
-    margin-left: 20px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+  background-color: darksalmon;
+  color: white;
+  width: 260px;
+  margin-left: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 form {
-    background-color: white;
-    width: 260px;
-    margin-left: 20px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+  background-color: white;
+  width: 260px;
+  margin-left: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 label {
-    margin-top: 10px;
-    margin-left: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 input {
-    margin-left: 20px;
-    width: 220px;
-    height: 20px;
-    background-color:linen;
+  padding-left: 5px;
+  margin-left: 20px;
+  width: 220px;
+  height: 20px;
+  background-color: linen;
 }
-.button{
-    margin-left: 80px;
-    background-color: green;
-    color: white;
-    width: 70px;
-    margin-bottom: 10px;
+.button {
+  margin-left: 80px;
+  background-color: green;
+  color: white;
+  width: 70px;
+  margin-bottom: 10px;
 }
 
-#errors {
-    color: red;
-    margin-right: 450px;
-    float: right;
+#email_err,
+#password_err {
+  color: red;
+  margin-left: 20px;
 }
 .information {
-    float: right;
-    margin-right: 200px;
-    margin-top: 100px;
+  float: right;
+  margin-right: 200px;
+  margin-top: 100px;
 }

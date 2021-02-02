@@ -1,17 +1,28 @@
-form{
-    max-width: 600px;
-    background-color: limegreen;
+form {
+  width: 600px;
+  background-color: limegreen;
+  margin: auto;
 }
 form legend {
-    text-align: center;
+  text-align: center;
 }
-fieldset{
-    background-color: lightgreen;
+fieldset {
+  background-color: lightgreen;
+  width: 550px;
+  margin: auto;
 }
 .information {
-    margin-top: 25px;
+  margin-top: 30px;
+  margin-left: 600px;
 }
 
-#errors {
-    color: red;
+#fname_err,
+#password_err,
+#address_err,
+#game_err,
+#gender_err,
+#dob_err,
+#mstatus_err,
+#terms_err {
+  color: red;
 }

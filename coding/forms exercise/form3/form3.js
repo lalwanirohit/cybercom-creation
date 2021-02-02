@@ -1,106 +1,160 @@
-months = ['jan' , 'feb' , 'mar' , 'apr' , 'may' , 'jun' , 'jul' , 'aug' , 'sep' , 'oct' , 'nov' ,'dec'];
-for(var i=0; i<=11; i++) {
+months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+for (var i = 0; i <= 11; i++) {
     var x = document.getElementById("month");
     var option = document.createElement("option");
     option.text = months[i];
-    x.add(option); 
+    x.add(option);
 }
 
-for(var i = 1; i < 32; i++) {
+for (var i = 1; i < 32; i++) {
     var x = document.getElementById("date");
     var option = document.createElement("option");
     option.text = i;
-    x.add(option); 
+    x.add(option);
 }
 
-for(var i = 1980; i<2006 ; i++) {
+for (var i = 1980; i < 2006; i++) {
     var x = document.getElementById("year");
     var option = document.createElement("option");
     option.text = i;
-    x.add(option); 
+    x.add(option);
 }
 
-countries = ['India' , 'Australia' , 'Brazil' ,'Canada' ,'Denmark' ,'France','Russian Federation' ,'United States'];
-for(var i=0; i<=countries.length; i++) {
+countries = ['India', 'Australia', 'Brazil', 'Canada', 'Denmark', 'France', 'Russian Federation', 'United States'];
+for (var i = 0; i <= countries.length; i++) {
     var x = document.getElementById("country");
     var option = document.createElement("option");
     option.text = countries[i];
-    x.add(option); 
+    x.add(option);
 }
 
+
+
 function validateForm() {
+    const efname = document.userform.fname;
+    const elname = document.userform.lname;
+    const edate = document.userform.date;
+    const emonth = document.userform.month;
+    const eyear = document.userform.year;
+    const egender = document.userform.gender;
+    const eemail = document.userform.email;
+    const ephone = document.userform.phone;
+    const epassword = document.userform.password;
+    const econfirm_password = document.userform.confirm_password;
 
-    var fname = document.userform.fname.value;
-    var lname = document.userform.lname.value;
-    var date = document.userform.date.value;
-    var month = document.userform.month.value;
-    var year = document.userform.year.value;
-    var gender = document.userform.gender.value;
-    var country = document.userform.country.value;
-    var email = document.userform.email.value;
-    var phone = document.userform.phone.value;
-    var password = document.userform.password.value;
-    var confirm_password = document.userform.confirm_password.value;
+    // elements
+    const fname = document.userform.fname.value;
+    const lname = document.userform.lname.value;
+    const date = document.userform.date.value;
+    const month = document.userform.month.value;
+    const year = document.userform.year.value;
+    const gender = document.userform.gender.value;
+    const email = document.userform.email.value;
+    const phone = document.userform.phone.value;
+    const password = document.userform.password.value;
+    const confirm_password = document.userform.confirm_password.value;
 
-    if(fname == "") {
-        document.getElementById("errors").innerHTML = '<li>please enter first name</li>';
+    if (fname == "") {
+        efname.style.border = "1px solid red";
+        efname.focus();
+        document.getElementById("fname_err").innerHTML = "<small>Please enter first name</small>";
         return false;
     }
-
-    if(lname == "") {
-        document.getElementById("errors").innerHTML = '<li>please enter last name</li>';
-        return false;
+    else {
+        document.getElementById("fname_err").style.visibility = "hidden";
     }
 
-    if(date == "" || date == "Date") {
-        document.getElementById("errors").innerHTML = '<li>please select date</li>';
+    if (lname == "") {
+        elname.style.border = "1px solid red";
+        elname.focus();
+        document.getElementById("lname_err").innerHTML = "<small>Please enter last name</small>";
         return false;
     }
-
-    if(month == "" || month == "Month") {
-        document.getElementById("errors").innerHTML = '<li>please select month</li>';
-        return false;
+    else {
+        document.getElementById("lname_err").style.visibility = "hidden";
     }
 
-    if(year == "" || year == "Year") {
-        document.getElementById("errors").innerHTML = '<li>please select year</li>';
+    if (date == "" || date == "Date") {
+        edate.style.border = "1px solid red";
+        edate.focus();
+        document.getElementById("dob_err").innerHTML = "<small>Please select month , date and age</small>";
         return false;
     }
-
-    if(gender == "") {
-        document.getElementById("errors").innerHTML = '<li>please select gender</li>';
-        return false;
+    else {
+        document.getElementById("dob_err").style.visibility = "hidden";
     }
 
-    if(country == "" || country == "Country") {
-        document.getElementById("errors").innerHTML = '<li>please select country</li>';
+    if (month == "" || month == "Month") {
+        emonth.style.border = "1px solid red";
+        emonth.focus();
+        document.getElementById("dob_err").innerHTML = "<small>Please select month , date and age</small>";
         return false;
     }
-
-    if(email == "") {
-        document.getElementById("errors").innerHTML = '<li>please enter Email</li>';
-        return false;
+    else {
+        document.getElementById("dob_err").style.visibility = "hidden";
     }
 
-    if(phone == "" || phone.length < 10) {
-        document.getElementById("errors").innerHTML = '<li>please enter phone</li><li>phone number should be of 10 digits</li>';
+    if (year == "" || year == "Year") {
+        eyear.style.border = "1px solid red";
+        eyear.focus();
+        document.getElementById("dob_err").innerHTML = "<small>Please select month , date and age</small>";
         return false;
     }
-
-    if(password == "" || password.length < 6 ) {
-        document.getElementById("errors").innerHTML = '<li>please enter password.</li><li>password should be minimum 6 characters long</li>';
-        return false;
+    else {
+        document.getElementById("dob_err").style.visibility = "hidden";
     }
 
-    if(confirm_password == "" || password !== confirm_password ) {
-        document.getElementById("errors").innerHTML = '<li>please confirm password.</li><li>password and confirm password must be same</li>';
+    if (gender == "") {
+        document.getElementById("gender_err").innerHTML = "<small>Please select gender</small>";
         return false;
     }
-
-    if(!document.userform.terms.checked) {
-        document.getElementById("errors").innerHTML = '<li>please accept the agreement</li>';
-        return false;
+    else {
+        document.getElementById("gender_err").style.visibility = "hidden";
     }
 
+    if (email == "") {
+        eemail.style.border = "1px solid red";
+        eemail.focus();
+        document.getElementById("email_err").innerHTML = "<small>Please enter email</small>";
+        return false;
+    }
+    else {
+        document.getElementById("email_err").style.visibility = "hidden";
+    }
+
+    if (phone == "" || phone.length < 10) {
+        ephone.style.border = "1px solid red";
+        ephone.focus();
+        document.getElementById("phone_err").innerHTML = "<small>Please enter phone number</small>";
+        return false;
+    }
+    else {
+        document.getElementById("phone_err").style.visibility = "hidden";
+    }
+
+    if (password == "" || password.length < 6) {
+        epassword.style.border = "1px solid red";
+        epassword.focus();
+        document.getElementById("password_err").innerHTML = "<small>Please enter password <br> it must be 6 characters long</small>";
+        return false;
+    }
+    else {
+        document.getElementById("password_err").style.visibility = "hidden";
+    }
+
+    if (confirm_password !== password) {
+        econfirm_password.style.border = "1px solid red";
+        econfirm_password.focus();
+        document.getElementById("cpassword_err").innerHTML = "<small>must be sameas password</small>";
+        return false;
+    }
+    else {
+        document.getElementById("cpassword_err").style.visibility = "hidden";
+    }
+
+    if (!document.userform.terms.checked) {
+        document.getElementById("terms_err").innerHTML = "<small>Please agree the terms and conditions</small>";
+        return false;
+    }
     return true;
 }
