@@ -71,7 +71,7 @@ function validateForm() {
     if (address == "") {
         address_element.style.border = "1px solid red";
         address_element.focus();
-        document.getElementById("address_err").innerHTML = "<small>Please enter password</small>";
+        document.getElementById("address_err").innerHTML = "<small>Please enter address</small>";
         return false;
     }
     else {
@@ -133,7 +133,7 @@ function validateForm() {
     }
 
     if (!document.userform.terms.checked) {
-        document.getElementById("terms_err").innerHTML = "<small>Please select marital status</small>";
+        document.getElementById("terms_err").innerHTML = "<small>Please accept the agreement</small>";
         return false;
     }
 

@@ -145,7 +145,7 @@ function validateForm() {
     if (confirm_password !== password) {
         econfirm_password.style.border = "1px solid red";
         econfirm_password.focus();
-        document.getElementById("cpassword_err").innerHTML = "<small>must be sameas password</small>";
+        document.getElementById("cpassword_err").innerHTML = "<small>must be same as password</small>";
         return false;
     }
     else {

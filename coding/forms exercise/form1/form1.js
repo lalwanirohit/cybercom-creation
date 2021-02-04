@@ -50,7 +50,7 @@ function validateForm() {
     if (address == "") {
         address_element.style.border = "1px solid red";
         address_element.focus();
-        document.getElementById("address_err").innerHTML = "<small>Please enter password</small>";
+        document.getElementById("address_err").innerHTML = "<small>Please enter address</small>";
         return false;
     }
     else {
@@ -67,7 +67,7 @@ function validateForm() {
     }
 
     if (flag == 0) {
-        document.getElementById("game_err").innerHTML = "<small>Please select gender</small>";
+        document.getElementById("game_err").innerHTML = "<small>Please select game</small>";
         return false;
     }
     else {
