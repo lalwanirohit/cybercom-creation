@@ -20,16 +20,7 @@ for (var i = 1980; i < 2006; i++) {
     x.add(option);
 }
 
-console.log("hello");
-
 function validateForm() {
-
-    const fname_element = document.userform.fname;
-    const password_element = document.userform.password;
-    const address_element = document.userform.address;
-    var month_element = document.userform.month;
-    var date_element = document.userform.date;
-    var year_element = document.userform.year;
 
     var fname = document.userform.fname.value;
     var password = document.userform.password.value;
@@ -40,102 +31,51 @@ function validateForm() {
     var year = document.userform.year.value;
     var marital_status = document.userform.status.value;
 
-    if (fname == "") {
-        fname_element.style.border = "1px solid red";
-        fname_element.focus();
-        document.getElementById("fname_err").innerHTML = "<small>Please enter first name</small>";
-        return false;
-    }
-    else {
-        document.getElementById("fname_err").style.visibility = "hidden";
-    }
-
-    if (password == "" || password.length < 6) {
-        password_element.style.border = "1px solid red";
-        password_element.focus();
-        document.getElementById("password_err").innerHTML = "<small>Please enter password</small>";
-        return false;
-    }
-    else {
-        document.getElementById("password_err").style.visibility = "hidden";
-    }
-
-    if (gender == "") {
-        document.getElementById("gender_err").innerHTML = "<small>Please select gender</small>";
-        return false;
-    }
-    else {
-        document.getElementById("gender_err").style.visibility = "hidden";
-    }
-
-    if (address == "") {
-        address_element.style.border = "1px solid red";
-        address_element.focus();
-        document.getElementById("address_err").innerHTML = "<small>Please enter address</small>";
-        return false;
-    }
-    else {
-        document.getElementById("address_err").style.visibility = "hidden";
-    }
-
-    if (month == "" || month == "Month") {
-        month_element.style.border = "1px solid red";
-        month_element.focus();
-        document.getElementById("dob_err").innerHTML = "<small>Please select month , date and age</small>";
-        return false;
-    }
-    else {
-        document.getElementById("dob_err").style.visibility = "hidden";
-    }
-
-    if (date == "" || date == "Date") {
-        date_element.style.border = "1px solid red";
-        date_element.focus();
-        document.getElementById("dob_err").innerHTML = "<small>Please select month , date and age</small>";
-        return false;
-    }
-    else {
-        document.getElementById("dob_err").style.visibility = "hidden";
-    }
-
-    if (year == "" || year == "Year") {
-        year_element.style.border = "1px solid red";
-        year_element.focus();
-        document.getElementById("dob_err").innerHTML = "<small>Please select month , date and age</small>";
-        return false;
-    }
-    else {
-        document.getElementById("dob_err").style.visibility = "hidden";
-    }
-
     var flag = 0;
-    for (var i = 0; i < 4; i++) {
-        if (document.userform['games[]'][i].checked) {
-            console.log(flag);
-            flag++;
+        for (var i = 0; i < 4; i++) {
+            if (document.userform['games[]'][i].checked) {
+                console.log(flag);
+                flag++;
+            }
         }
-    }
 
-    if (flag == 0) {
-        document.getElementById("game_err").innerHTML = "<small>Please select game</small>";
+    if(fname == "" || password == "" || password.length < 6 || gender == "" || address == "" || month == "" || month == "Month"
+    || date == "" || date == "Date" || year == "" || year == "Year" || flag == 0 || marital_status == "" || !document.userform.terms.checked) 
+    {
+        if (fname == "") {
+            document.getElementById("fname_err").innerHTML = "<small>* Please enter first name</small>";
+        } else { document.getElementById("fname_err").style.visibility = "hidden"; }
+        
+        if (password == "" || password.length < 6) {
+            document.getElementById("password_err").innerHTML = "<small>* Please enter password</small>";
+        } else { document.getElementById("password_err").style.visibility = "hidden"; }
+        
+        if (gender == "") {
+            document.getElementById("gender_err").innerHTML = "<small>* Please select gender</small>";
+        } else { document.getElementById("gender_err").style.visibility = "hidden"; }
+
+        if (address == "") {
+            document.getElementById("address_err").innerHTML = "<small>* Please enter address</small>";
+        } else { document.getElementById("address_err").style.visibility = "hidden"; }
+    
+        if (month == "" || month == "Month" || date == "" || date == "Date" || year == "" || year == "Year") {
+            document.getElementById("dob_err").innerHTML = "<small>* Please select month , date and age</small>";
+        } else { document.getElementById("dob_err").style.visibility = "hidden"; }
+        
+        if (flag == 0) {
+            document.getElementById("game_err").innerHTML = "<small>* Please select game</small>";
+        } else { document.getElementById("game_err").style.visibility = "hidden"; }
+        
+        if (marital_status == "") {
+            document.getElementById("mstatus_err").innerHTML = "<small>* Please select marital status</small>";
+        } else { document.getElementById("mstatus_err").style.visibility = "hidden"; }
+
+        if (!document.userform.terms.checked) {
+            document.getElementById("terms_err").innerHTML = "<small>* Please accept the agreement</small>";
+        } else { document.getElementById("terms_err").style.visibility = "hidden"; }
         return false;
     }
     else {
-        document.getElementById("game_err").style.visibility = "hidden";
-    }
-
-    if (marital_status == "") {
-        document.getElementById("mstatus_err").innerHTML = "<small>Please select marital status</small>";
-        return false;
-    }
-    else {
-        document.getElementById("mstatus_err").style.visibility = "hidden";
-    }
-
-    if (!document.userform.terms.checked) {
-        document.getElementById("terms_err").innerHTML = "<small>Please accept the agreement</small>";
-        return false;
-    }
-
-    return true;
+        return true;
+    } 
 }
