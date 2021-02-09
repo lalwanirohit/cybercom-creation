@@ -23,19 +23,19 @@ class Contact {
 	}
 
     // fetch contact data from contacts table
-    public function selectAll() {
-        $query = "SELECT * FROM contacts";
-        $result = $this->con->query($query);
-        if($result->num_rows > 0) {
-            $data = array();
-            while($row = $result->fetch_array()) {
-                $data[] = $row;
-            }
-            return $data;
-        } else {
-            echo 'there are no records in table';
-        }
-    }
+    // public function selectAll() {
+    //     $query = "SELECT * FROM contacts";
+    //     $result = $this->con->query($query);
+    //     if($result->num_rows > 0) {
+    //         $data = array();
+    //         while($row = $result->fetch_array()) {
+    //             $data[] = $row;
+    //         }
+    //         return $data;
+    //     } else {
+    //         echo 'there are no records in table';
+    //     }
+    // }
 
 
     // Insert contact data into contacts table
@@ -50,11 +50,10 @@ class Contact {
         $query="INSERT INTO contacts (contact_name, contact_email, contact_phone, contact_title, created_at) VALUES ('$name','$email','$phone','$title','$created_at')";
         $sql = $this->con->query($query);
         if ($sql==true) {
-            header("Location: contacts.php?msg1=insert");
+            header("Location: contacts.php");
 
         }else{
             echo "Registration failed try again!";
-            echo $query;
         }
     }
 
@@ -94,13 +93,15 @@ class Contact {
     
     // delete single record
     function deleteRecord($id) {
-        $query = "DELETE from contacts where contact_id = ". $this->con->real_escape_string($id) . "";
+        $query = "DELETE from contacts where contact_id = ".$id. "";
         $sql =  $this->con->query($query);
         if($sql==true) {
-            header('Loation: contacts.php');
+            echo 1;
+            exit;
         }
         else {
-            echo 'sorry, operation failed';
+            echo 0;
+            exit;
         }
     }
 }

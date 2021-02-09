@@ -4,11 +4,9 @@ require 'server/server.php';
 
 $contactObj = new Contact();
 
-if(isset($_GET['deleteid']) && !empty($_GET['deleteid'])) {
-    $editid = $_GET['deleteid'];
-    $contact = $contactObj->deleteRecord($editid);
+if(isset($_POST['id'])) {
+    $id = $_POST['id'];
+    $contact = $contactObj->deleteRecord($id);
 }
-
-header('Location: contacts.php');
 
 ?>
