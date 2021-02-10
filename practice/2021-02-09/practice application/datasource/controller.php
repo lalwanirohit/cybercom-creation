@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 class Contact
 {
 
@@ -65,6 +67,8 @@ class Contact
                 $sql = $this->con->query($query);
 
                 if ($sql == true) {
+					
+					$_SESSION['insert']='success';
                     header('Location: contacts.php');
                 }
             }

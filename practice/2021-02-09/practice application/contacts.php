@@ -39,7 +39,17 @@ $obj = new Contact();
 
 
     <br>
-    <h2>Read Contacts</h2>
+    <h2>Read Contacts</h2> <div class="msg"> <label class="display"></label> </div> 
+	<?php
+		if(isset($_SESSION['insert'])) {
+			unset($_SESSION['insert']); 
+	?>
+	
+    <script>
+    $('.msg').html("<label class='display'>Record inserted successfully...</label>");
+	$(".display").fadeOut(5000); 
+    </script>
+		<?php } ?>
     <hr>
     <button type="button" class="btn btn-success" onclick="location.href='create.php'">Create Contact</button><br><br>
 

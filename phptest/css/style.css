@@ -1,0 +1,15 @@
+.error {
+    color: red;
+}
+.msg {
+    color:orange;
+    font-size: larger;
+}
+.errmsg {
+    color:red;
+    font-size: larger;
+}
+.sucmsg {
+    color:green;
+    font-size: larger;
+}

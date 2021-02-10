@@ -48,3 +48,7 @@ $(document).ready(function(){
         }
     });
 });
+
+
+setTimeout(function()
+{$('.message').fadeout();},6000);
