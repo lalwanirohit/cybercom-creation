@@ -1,3 +1,0 @@
-this file is for rename ()
-it will be renamed when you run php_renamefile_rename_function.php file
-thank you
